@@ -11,7 +11,7 @@ import webbrowser
 import platform
 import asyncio
 import os
-from minilib import isMorning, isAfterNoon, isEvening
+from minilib import *
 
 
 
@@ -100,6 +100,11 @@ def commandProcessor():
             intro = '''
             My name is Anna, a virtual assistant to assist with any task as best I can.
             '''
+            speechEngine(intro)
+        elif 'your name' in command:
+            intro = '''
+             My name is Anna.
+                       '''
             speechEngine(intro)
         
         elif 'date' in command: # Date Handler
